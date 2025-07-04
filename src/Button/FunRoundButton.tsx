@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useMemo } from 'react';
-import colors from 'tailwindcss/dist/colors';
 import { motion } from 'framer-motion';
 
 interface Props {
@@ -19,19 +18,19 @@ const FunRoundButton = ({ onClick, disabled, type, children, color, active, clas
     const { front, bottom } = useMemo(() => {
         switch (color) {
             case 'primary':
-                return { bottom: '#00b4d8', front: colors.sky['600'] };
+                return { bottom: '#00b4d8', front: '#0284c7' };
             case 'red':
                 return { bottom: disabled ? 'hsl(340deg 100% 42%)' : 'hsl(345deg 100% 47%)', front: disabled ? 'hsl(340deg 100% 52%)' : 'hsl(340deg 100% 32%)', };
             case 'green':
-                return { bottom: disabled ? colors.green['300'] : colors.green['500'], front: disabled ? colors.green['400'] : colors.green['600'] };
+                return { bottom: disabled ? '#86efac' : '#22c55e', front: disabled ? '#4ade80' : '#16a34a' };
             case 'purple':
-                return { bottom: disabled ? colors.indigo['300'] : colors.indigo['500'], front: disabled ? colors.indigo['400'] : colors.indigo['600'] };
+                return { bottom: disabled ? '#a5b4fc' : '#6366f1', front: disabled ? '#818cf8' : '#4f46e5' };
             case 'teal':
-                return { bottom: disabled ? colors.teal['300'] : colors.teal['500'], front: disabled ? colors.teal['400'] : colors.teal['600'] };
+                return { bottom: disabled ? '#5eead4' : '#14b8a6', front: disabled ? '#2dd4bf' : '#0d9488' };
             case 'yellow':
-                return { bottom: disabled ? colors.yellow['300'] : colors.yellow['500'], front: disabled ? colors.yellow['400'] : colors.yellow['600'] };
+                return { bottom: disabled ? '#fde047' : '#eab308', front: disabled ? '#facc15' : '#ca8a04' };
             default:
-                return { bottom: disabled ? colors.gray['300'] : '#00b4d8', front: disabled ? colors.sky['400'] : colors.sky['700'] };
+                return { bottom: disabled ? '#d1d5db' : '#00b4d8', front: disabled ? '#38bdf8' : '#0369a1' };
         }
     }, [color, disabled]);
 

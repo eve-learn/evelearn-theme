@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import colors from 'tailwindcss/dist/colors';
 import ReactDOM from 'react-dom';
 import Button from '../Button/Button';
 
@@ -38,7 +37,7 @@ const BottomAlert: React.FC<Props> = ({ isDark, setDontShowAgain, dontShowAgain,
         >
             <div className='absolute top-0 w-full h-screen flex justify-center bg-gray-200/90 dark:bg-slate-800/50'>
                 <div className='absolute sm:w-1/2 w-full mx-auto shadow-xl rounded-md p-6 flex z-50 flex-col top-24 bg-white dark:bg-slate-900 overflow-clip rounded-bl-lg rounded-br-lg border-b-8 border-b-blue-500'>
-                    <div style={{ borderColor: borderColor || colors.sky['500'] }}>
+                    <div style={{ borderColor: borderColor || '#0ea5e9' }}>
                         <h3 className='font-semibold font-header text-gray-700 dark:text-gray-300 text-xl'>{title}</h3>
                         <div className='mt-2 text-lg'>
                             {children}

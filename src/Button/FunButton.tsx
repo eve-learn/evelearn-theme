@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useMemo } from 'react';
-import colors from 'tailwindcss/dist/colors';
 import Spinner from '../Spinners/Spinner';
 import { motion } from 'framer-motion';
 
@@ -31,21 +30,21 @@ const FunButton: React.FC<Props> = ({
     const { front, bottom } = useMemo(() => {
         switch (color) {
             case 'primary':
-                return { bottom: '#00b4d8', front: colors.sky['600'] };
+                return { bottom: '#00b4d8', front: '#0284c7' };
             case 'red':
-                return { bottom: '#f00f0f', front: colors.red['700'] };
+                return { bottom: '#f00f0f', front: '#b91c1c' };
             case 'green':
-                return { bottom: colors.green['500'], front: colors.green['600'] };
+                return { bottom: '#22c55e', front: '#16a34a' };
             case 'purple':
-                return { bottom: colors.indigo['500'], front: colors.indigo['600'] };
+                return { bottom: '#6366f1', front: '#4f46e5' };
             case 'teal':
-                return { bottom: colors.teal['500'], front: colors.teal['600'] };
+                return { bottom: '#14b8a6', front: '#0d9488' };
             case 'cyan':
-                return { bottom: colors.cyan['500'], front: colors.cyan['600'] };
+                return { bottom: '#06b6d4', front: '#0891b2' };
             case 'yellow':
-                return { bottom: colors.yellow['500'], front: colors.yellow['600'] };
+                return { bottom: '#eab308', front: '#ca8a04' };
             default:
-                return { bottom: '#00b4d8', front: colors.sky['700'] };
+                return { bottom: '#00b4d8', front: '#0369a1' };
         }
     }, [color]);
 
