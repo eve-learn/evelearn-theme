@@ -1,0 +1,11 @@
+
+
+export const baseFieldStyle = 'font-sans form-input h-11 w-full bg-white border-gray-200 dark:border-gray-500 dark:bg-slate-800 dark:text-gray-200 text-gray-700 dark:placeholder-gray-400 placeholder-gray-400 rounded-md  px-2 py-1 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50';
+export const createExerciseElementStyle = 'flex flex-col justify-between space-y-2 w-full p-4 bg-white dark:bg-slate-800 rounded-xl text-gray-800 dark:text-gray-200 border-2 border-slate-200 dark:border-slate-400 overflow-hidden transition-all';
+export const exerciseDeleteButton = 'w-6 h-6 flex justify-center text-gray-700 dark:text-gray-200 hover:text-red-600 dark:hover:text-red-500 transition-all duration-150 hover:scale-125';
+export const xIconButton = 'w-6 h-6 flex justify-center text-gray-700 dark:text-gray-200 hover:text-gray-950 dark:hover:text-gray-100 transition-all duration-150 hover:scale-125';
+export const exerciseEditButton = 'w-6 h-6 flex justify-center text-gray-700 dark:text-gray-200 hover:text-red-600 dark:hover:text-green-500 transition-all duration-150 hover:scale-125';
+export const tippyClassname = 'p-2 bg-slate-600 dark:bg-slate-900 opacity-90 text-white font-medium font-header rounded-lg';
+export const headerTippyClass = 'rounded-lg p-2 bg-slate-950 opacity-95 text-white font-medium';
+export const headerButtonClass = 'w-10 h-10 rounded-full dark:hover:bg-slate-600 hover:bg-slate-200 bg-transparent flex justify-center items-center flex justify-center items-center text-slate-600 dark:text-slate-100 hover:text-primary dark:hover:text-primary transition-colors duration-50';
+export const toolbarExerciseButton = 'flex bg-gray-50/90 items-center sm:justify-between p-4 shadow-sm w-full rounded-xl border-4 border-transparent hover:border-white text-gray-700 hover:text-white hover:bg-indigo-500 transition-colors duration-75';

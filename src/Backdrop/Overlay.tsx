@@ -1,0 +1,69 @@
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import { BaseModalProps } from '../Common/Modal';
+import ReactDOM from 'react-dom';
+import { openSans, ubuntu, parkinsans } from '../fonts';
+// import useDarkMode from '@/listeners/DarkModeListener';
+
+export type OverlayProps = BaseModalProps & {
+    children?: React.ReactNode;
+    withContainer?: boolean;
+    opacity?: number;
+    isDark?: boolean;
+    zIndex?: number;
+    onClick?: () => void;
+}
+
+const Overlay = ({ visible, onDismissed, onClick, zIndex, isDark, children, opacity, withContainer = true, }: OverlayProps) => {
+    const [modalRoot, setModalRoot] = useState<HTMLElement | null>(null);
+    // const {theme: darkMode} = useDarkMode();
+
+    useEffect(() => {
+        // if (modalRoot) return;
+        // Create a div element to serve as our portal's root
+        let root = document.getElementById('modal-root');
+        if (!root) {
+            root = document.createElement('div');
+            root.id = 'modal-root';
+            document.body.appendChild(root);
+        }
+        setModalRoot(root);
+
+        return () => {
+            const root = document.getElementById('modal-root');
+            if (root) {
+                // root = document.createElement('div');
+                // root.id = 'modal-root';
+                document.body.removeChild(root);
+            }
+        }
+
+    }, [visible]);
+
+    if (!visible || !modalRoot) return null;
+
+    return ReactDOM.createPortal(
+        <div className="animate-fade-in">
+            {withContainer ?
+                <div
+                    onClick={onDismissed || onClick}
+                    className={`top-0 left-0 fixed w-full h-screen flex items-center justify-center ${parkinsans.variable} ${ubuntu.variable} ${openSans.variable}`}
+                    style={{
+                        background: isDark ? `rgba(0, 0, 0, ${opacity || '0.7'})` : `rgba(255, 255, 255, ${opacity || '0.6'})`,
+                        zIndex: zIndex || 9999,
+                    }}
+                >
+                    {children}
+                </div>
+                :
+                <div className={`${ubuntu.variable} ${parkinsans.variable} ${openSans.variable}`}>
+                    {children}
+                </div>
+            }
+        </div>,
+        modalRoot
+    );
+};
+
+export default Overlay;
