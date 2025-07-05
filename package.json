@@ -1,18 +1,17 @@
 {
   "name": "evelearn-theme",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts src/server.ts --format esm,cjs --dts",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
     "pub": "npm publish --access public"
   },
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     }
   },
   "keywords": [],
@@ -21,6 +20,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@floating-ui/react": "^0.27.13",
+    "@swc/core": "^1.12.9",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
