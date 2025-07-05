@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { BaseModalProps } from '../Common/Modal';
 import ReactDOM from 'react-dom';
-import { openSans, ubuntu, parkinsans } from '../fonts';
 // import useDarkMode from '@/listeners/DarkModeListener';
 
 export type OverlayProps = BaseModalProps & {
@@ -48,7 +47,7 @@ const Overlay = ({ visible, onDismissed, onClick, zIndex, isDark, children, opac
             {withContainer ?
                 <div
                     onClick={onDismissed || onClick}
-                    className={`top-0 left-0 fixed w-full h-screen flex items-center justify-center ${parkinsans.variable} ${ubuntu.variable} ${openSans.variable}`}
+                    className={`top-0 left-0 fixed w-full h-screen flex items-center justify-center`}
                     style={{
                         background: isDark ? `rgba(0, 0, 0, ${opacity || '0.7'})` : `rgba(255, 255, 255, ${opacity || '0.6'})`,
                         zIndex: zIndex || 9999,
@@ -57,9 +56,7 @@ const Overlay = ({ visible, onDismissed, onClick, zIndex, isDark, children, opac
                     {children}
                 </div>
                 :
-                <div className={`${ubuntu.variable} ${parkinsans.variable} ${openSans.variable}`}>
-                    {children}
-                </div>
+                children
             }
         </div>,
         modalRoot

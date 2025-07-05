@@ -4,7 +4,6 @@ import React, { CSSProperties } from 'react';
 import Overlay from '../Backdrop/Overlay';
 import Link from 'next/link';
 import XIcon from '../Icons/XIcon';
-// import { useStoreState } from '@/store';
 
 
 export interface BaseModalProps {

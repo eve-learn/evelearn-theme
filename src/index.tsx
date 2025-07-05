@@ -22,7 +22,6 @@ export { default as Tippy } from './Common/Tippy';
 export { default as ToggleSwitch } from './Common/ToggleSwitch';
 export { default as UserContentSwitcher } from './Common/UserContentSwitcher';
 export { default as Fade } from './Fade/Fade';
-export { ubuntu, balsamicSans, openSans, parkinsans } from './fonts/index';
 
 export { default as ProgressBarSimple } from './ProgressBar/ProgressBarSimple';
 export { default as ProgressBar } from './ProgressBar/ProgressBar';
