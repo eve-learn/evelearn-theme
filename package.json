@@ -1,11 +1,19 @@
 {
   "name": "evelearn-theme",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts"
+    "build": "tsup src/index.ts --format esm,cjs --dts"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./client": {
+      "import": "./dist/client.js"
+    }
   },
   "keywords": [],
   "author": "",

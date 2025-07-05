@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Tippy from '../Common/Tippy';
 import { tippyClassname } from '../Common/fieldStyle';
 

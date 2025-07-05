@@ -1,8 +1,3 @@
-'use client';
-
-import React from 'react';
-// import useDarkMode from '@/listeners/DarkModeListener';
-
 interface SpinnerProps {
     size?: 'base' | 'small';
     white?: boolean | string;
