@@ -1,7 +1,5 @@
-'use client';
 
-import React, { useEffect } from 'react';
-// import ErrorBoundary from './ErrorBoundary';
+import React from 'react';
 
 interface ContainerProps {
     backgroundColor?: string;
@@ -12,20 +10,8 @@ interface ContainerProps {
     children?: React.ReactNode;
 }
 
-const Container: React.FC<ContainerProps> = ({ backgroundColor, backgroundImage, style, children, onClick }) => {
-    // Apply background color to body using useEffect
-    useEffect(() => {
-        if (backgroundColor) {
-            document.body.style.background = backgroundColor;
-        } else {
-            document.body.style.background = '';
-        }
+const Container: React.FC<ContainerProps> = ({ backgroundImage, style, children, onClick }) => {
 
-        // Cleanup function to reset body background when component unmounts
-        return () => {
-            document.body.style.background = '';
-        };
-    }, [backgroundColor]);
 
     return (
         (backgroundImage) ?
