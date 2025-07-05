@@ -4,6 +4,7 @@ export { default as ErrorText } from './Common/ErrorText';
 export { baseFieldStyle, createExerciseElementStyle, exerciseDeleteButton, exerciseEditButton, headerButtonClass, headerTippyClass, tippyClassname, toolbarExerciseButton, xIconButton } from './Common/fieldStyle';
 export { default as Spinner } from './Spinners/Spinner';
 export { default as NoResults } from './Common/NoResults';
+export { default as Container } from './Common/Container';
 export { default as Pill } from './Common/Pill';
 export { default as StepsComponent } from './Common/StepsComponent';
 export { default as Fade } from './Fade/Fade';
