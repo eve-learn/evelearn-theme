@@ -1,6 +1,4 @@
-'use client';
-
-import React, { CSSProperties } from 'react';
+import { CSSProperties } from 'react';
 
 type Props = {
     text: string;

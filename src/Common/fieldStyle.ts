@@ -1,5 +1,3 @@
-
-
 export const baseFieldStyle = 'font-sans form-input h-11 w-full bg-white border-gray-200 dark:border-gray-500 dark:bg-slate-800 dark:text-gray-200 text-gray-700 dark:placeholder-gray-400 placeholder-gray-400 rounded-md  px-2 py-1 focus:outline-none focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50';
 export const createExerciseElementStyle = 'flex flex-col justify-between space-y-2 w-full p-4 bg-white dark:bg-slate-800 rounded-xl text-gray-800 dark:text-gray-200 border-2 border-slate-200 dark:border-slate-400 overflow-hidden transition-all';
 export const exerciseDeleteButton = 'w-6 h-6 flex justify-center text-gray-700 dark:text-gray-200 hover:text-red-600 dark:hover:text-red-500 transition-all duration-150 hover:scale-125';

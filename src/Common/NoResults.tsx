@@ -1,10 +1,6 @@
-'use client';
-
-
 
 const HEIGHT = 160;
 const WIDTH = HEIGHT * (16 / 9);
-// import { useTranslations } from 'next-intl';
 
 type Props = {
     loading: boolean;
