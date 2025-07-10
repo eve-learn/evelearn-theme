@@ -6,4 +6,4 @@ export const exerciseEditButton = 'w-6 h-6 flex justify-center text-gray-700 dar
 export const tippyClassname = 'p-2 bg-slate-600 dark:bg-slate-900 opacity-90 text-white font-medium font-header rounded-lg';
 export const headerTippyClass = 'rounded-lg p-2 bg-slate-950 opacity-95 text-white font-medium';
 export const headerButtonClass = 'w-10 h-10 rounded-full dark:hover:bg-slate-600 hover:bg-slate-200 bg-transparent flex justify-center items-center flex justify-center items-center text-slate-600 dark:text-slate-100 hover:text-primary dark:hover:text-primary transition-colors duration-50';
-export const toolbarExerciseButton = "flex bg-gray-100/80 dark:bg-slate-300/20 items-center sm:justify-between p-4 shadow-sm w-full rounded-xl border-4 border-transparent hover:border-white text-gray-700 hover:text-white hover:bg-indigo-500 transition-colors duration-75";
+export const toolbarExerciseButton = "flex bg-gray-100/20 dark:bg-slate-50/90 items-center sm:justify-between p-4 shadow-sm w-full rounded-xl border-4 border-transparent hover:border-slate-200 text-gray-700 hover:text-gray-800 hover:bg-white transition-colors duration-75";
