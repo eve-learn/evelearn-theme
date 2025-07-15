@@ -53,7 +53,7 @@ const Button = ({ disabled = false, loading, onClick, kind = 'primary', size = '
     }
 
     return (
-        <button type={type || 'button'} disabled={disabled} className={`rounded-lg focus:outline-none transition duration-100 ${styled()} ${sized()}`} onClick={onClick}>
+        <button type={type || 'button'} disabled={disabled} className={`rounded-lg cursor-pointer focus:outline-none transition duration-100 ${styled()} ${sized()}`} onClick={onClick}>
             <div className='w-full max-h-11'>
                 {loading ?
                     <div className='flex w-full justify-center items-center'>
