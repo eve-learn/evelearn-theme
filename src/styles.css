@@ -9,6 +9,7 @@
 @theme {
             --color-primary: oklch(0.746 0.16 232.661);
             --color-secondary: oklch(77.98% 0.120 25.75);
+            --color-secondarydark: oklch(68.62% 0.189 28.26);
             --color-blue-50: oklch(0.977 0.013 236.62);
             --color-blue-100: oklch(0.951 0.026 236.824);
             --color-blue-200: oklch(0.901 0.058 230.902);

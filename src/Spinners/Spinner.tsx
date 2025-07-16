@@ -2,15 +2,13 @@ interface SpinnerProps {
     size?: 'base' | 'small';
     white?: boolean | string;
     visible?: boolean | string;
-    isDark?: boolean;
 }
 
-const Spinner = ({ visible = true, size, white, isDark }: SpinnerProps) => {
+const Spinner = ({ visible = true, size, white: isWhite }: SpinnerProps) => {
     // const {theme} = useDarkMode();
     
     if (visible === false) return null;
     
-    const isWhite = white || isDark;
     const color = isWhite ? 'stroke-white/90' : 'stroke-slate-600/80';
     const bgColor = isWhite ? 'stroke-white/20' : 'stroke-slate-500/20';
     const dimensions = size === 'small' ? 'w-5 h-5' : 'w-8 h-8';
