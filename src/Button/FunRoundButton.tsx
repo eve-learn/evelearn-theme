@@ -2,6 +2,7 @@
 
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
+import clsx from 'clsx';
 
 interface Props {
     disabled?: boolean;
@@ -36,7 +37,7 @@ const FunRoundButton = ({ onClick, disabled, type, children, color, active, clas
 
     return (
         <motion.button
-            className={`${className || 'border-none p-0 flex justify-center items-center cursor-pointer z-10'} ${disabled ? 'opacity-70 cursor-default' : 'hover:opacity-95'}`}
+            className={clsx(className || 'border-none p-0 flex justify-center items-center cursor-pointer z-10', disabled ? 'opacity-70 cursor-default' : 'hover:opacity-95')}
             style={{
                 background: front,
                 height: size,

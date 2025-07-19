@@ -3,6 +3,7 @@
 import { useField } from 'formik';
 import { ChangeEvent } from 'react';
 import { motion } from 'framer-motion';
+import clsx from 'clsx';
 
 type FormikProps = {
     label: string;
@@ -19,14 +20,16 @@ const Formik = ({ label, name }: FormikProps) => {
     return (
         <label className='flex items-center space-x-2 cursor-pointer'>
             <div className="relative">
-                <input 
-                    type="checkbox" 
-                    className="opacity-0 absolute" 
-                    checked={value} 
-                    onChange={handleChange} 
+                <input
+                    type="checkbox"
+                    className="opacity-0 absolute"
+                    checked={value}
+                    onChange={handleChange}
                 />
-                <div className={`w-10 h-6 rounded-full p-[4px] transition-colors duration-300 ${value ? 'bg-[#00b4d8]' : 'bg-[#64748b]'}`}>
-                    <motion.div 
+                <div
+                    className={clsx('w-10 h-6 rounded-full p-[4px] transition-colors duration-300', value ? 'bg-[#00b4d8]' : 'bg-[#64748b]')}
+                >
+                    <motion.div
                         className="w-4 h-4 bg-white rounded-full absolute top-1"
                         initial={false}
                         animate={{
@@ -55,14 +58,16 @@ const ToggleSwitch = ({ label, onChange, value }: Props) => {
     return (
         <label className='flex items-center space-x-2 cursor-pointer'>
             <div className="relative">
-                <input 
-                    type="checkbox" 
-                    className="opacity-0 absolute" 
-                    checked={value} 
-                    onChange={handleChange} 
+                <input
+                    type="checkbox"
+                    className="opacity-0 absolute"
+                    checked={value}
+                    onChange={handleChange}
                 />
-                <div className={`w-10 h-6 rounded-full p-[4px] transition-colors duration-300 ${value ? 'bg-[#00b4d8]' : 'bg-[#64748b]'}`}>
-                    <motion.div 
+                <div
+                    className={clsx('w-10 h-6 rounded-full p-[4px] transition-colors duration-300', value ? 'bg-[#00b4d8]' : 'bg-[#64748b]')}
+                >
+                    <motion.div
                         className="w-4 h-4 bg-white rounded-full absolute top-1"
                         initial={false}
                         animate={{

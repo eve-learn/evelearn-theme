@@ -44,7 +44,7 @@ const Overlay = ({ visible, onDismissed, onClick, zIndex, isDark, children, opac
             {withContainer ?
                 <div
                     onClick={onDismissed || onClick}
-                    className={`top-0 left-0 fixed w-full h-screen flex items-center justify-center`}
+                    className='top-0 left-0 fixed w-full h-screen flex items-center justify-center'
                     style={{
                         background: isDark ? `rgba(0, 0, 0, ${opacity || '0.7'})` : `rgba(255, 255, 255, ${opacity || '0.6'})`,
                         zIndex: zIndex || 9999,

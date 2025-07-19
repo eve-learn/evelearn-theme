@@ -15,6 +15,7 @@ import {
     type Placement
 } from '@floating-ui/react';
 import { tippyClassname } from './fieldStyle';
+import clsx from 'clsx';
 
 interface TippyProps {
     children: ReactNode;
@@ -74,12 +75,13 @@ const Tippy = ({ children, content, placement = 'top', className = '', wrapperCl
                 <FloatingPortal>
                     <div
                         ref={refs.setFloating}
-                        className={`z-[9999] ${className || tippyClassname}`}
+                        className={clsx(`${className || tippyClassname}`)}
                         {...getFloatingProps()}
                         style={{
                             position: strategy,
                             top: y ?? 0,
                             left: x ?? 0,
+                            zIndex: 9999,
                             width: 'max-content',
                         }}
                     >

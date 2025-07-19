@@ -3,6 +3,7 @@
 import React, { useMemo } from 'react';
 import { useField } from 'formik';
 import ErrorText from '../Common/ErrorText';
+import clsx from 'clsx';
 
 type Props = {
     name: string;
@@ -36,7 +37,7 @@ const Checkbox = ({ name, labelText, isLarge, onChange, isDisabled }: Props) => 
                     name={name}
                     type='checkbox'
                     checked={!!value}
-                    className={`form-checkbox text-blue-600 focus:ring-blue-500 border-gray-300 rounded ${isLarge ? 'h-5 w-5' : 'h-4 w-4'}`}
+                    className={clsx('form-checkbox text-blue-600 focus:ring-blue-500 border-gray-300 rounded', isLarge ? 'h-5 w-5' : 'h-4 w-4')}
                 />
                 {typeof labelText === 'string' ?
                     <label htmlFor={`${name}${rand}`} className='ml-2 block text-sm text-gray-800 dark:text-gray-200'>
@@ -84,7 +85,7 @@ const MultiChoiceCheckBox = ({ name, hasMultipleAnswers, index, isLarge, allOpti
                     id={name}
                     name={name}
                     type='checkbox'
-                    className={`form-checkbox text-blue-600 focus:ring-blue-500 border-gray-300 rounded ${isLarge ? 'h-5 w-5' : 'h-4 w-4'}`}
+                    className={clsx('form-checkbox text-blue-600 focus:ring-blue-500 border-gray-300 rounded', isLarge ? 'h-5 w-5' : 'h-4 w-4')}
                 />
             </div>
         </div>

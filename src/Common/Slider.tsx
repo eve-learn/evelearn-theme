@@ -26,7 +26,7 @@ const Slider = ({ min, max, step, value, onChange }: SliderProps) => {
             step={step}
             value={value}
             onChange={handleChange}
-            className={`w-full h-2 rounded-lg range-input`}
+            className='w-full h-2 rounded-lg range-input'
         />
     );
 };

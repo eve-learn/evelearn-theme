@@ -32,7 +32,7 @@ const Modal = ({ visible, children, fullscreen, displayDark, dismissLink, bgOpac
 
         <Overlay visible={visible} onClick={dismissOnBackdropClick ? onDismissed : undefined} isDark={displayDark} withContainer={true} {...props}>
             <div
-                className={`${displayDark && 'dark'} bg-slate-900/20 fixed inset-0 flex items-center justify-center`}
+                className={clsx(displayDark && 'dark', 'bg-slate-900/20 fixed inset-0 flex items-center justify-center')}
                 style={{ zIndex: 10000 }}
             >
 

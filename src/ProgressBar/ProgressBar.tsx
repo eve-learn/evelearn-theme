@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import Tippy from '../Common/Tippy';
 import { tippyClassname } from '../Common/fieldStyle';
 
@@ -8,7 +9,7 @@ const ProgressBar = ({ progress }: { progress: number }) => (
         <div className='-mt-2 mb-6'>
             <div className='bg-gray-100 rounded-full h-2'>
                 <div
-                    className={`rounded-full h-2 ${progress === 100 ? 'bg-green-400' : 'bg-gray-100'}`}
+                    className={clsx('rounded-full h-2', progress === 100 ? 'bg-green-400' : 'bg-gray-100')}
                     style={{
                         width: `${progress}%`,
                         minWidth: '100%',
@@ -45,7 +46,7 @@ const ProgressStepBar = ({ steps, stepIndex, onStepClick, color }: Props) => {
                                     onClick={() => onStepClick?.(i)}
                                     className='cursor-pointer bg-gray-100 rounded-full h-2 overflow-hidden'>
                                     <div
-                                        className={`cursor-pointer rounded-full h-2 ${stepIndex >= i ? 'bg-green-400' : 'bg-gray-100'}`}
+                                        className={clsx('cursor-pointer rounded-full h-2', stepIndex >= i ? 'bg-green-400' : 'bg-gray-100')}
                                         style={{
                                             width: `${stepIndex >= i ? 100 : 0}%`,
                                             transition: 'width 0.3s ease'

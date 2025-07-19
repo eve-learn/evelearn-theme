@@ -33,8 +33,8 @@ const CourseProgress = ({ twColor, percentage, label }: Props) => {
 
     return (
         <div className='flex items-center flex-col justify-center space-y-0  dark:bg-inherit dark:text-gray-300'>
-            <div className={`relative flex items-center justify-center -my-2 -mt-1 overflow-hidden rounded-full`}>
-                <svg className={`-rotate-90`}>
+            <div className='relative flex items-center justify-center -my-2 -mt-1 overflow-hidden rounded-full'>
+                <svg className='-rotate-90'>
                     <circle
                         className='text-gray-300'
                         strokeWidth={strokeWidth}
@@ -83,8 +83,8 @@ const Small = ({ twColor, percentage, label }: Props) => {
 
     return (
         <div className='flex items-center space-x-2 rounded-full bg-transparent border-2 border-slate-100 w-full'>
-            <div className={`flex items-center justify-center overflow-hidden`}>
-                <svg className={`w-10 h-11 transform translate-x-1 translate-y-1`}>
+            <div className='flex items-center justify-center overflow-hidden'>
+                <svg className='w-10 h-11 transform translate-x-1 translate-y-1'>
                     <circle
                         className='text-gray-300'
                         strokeWidth={strokeWidth}
