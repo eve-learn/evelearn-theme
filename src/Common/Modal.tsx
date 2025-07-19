@@ -4,6 +4,7 @@ import React, { CSSProperties } from 'react';
 import Overlay from '../Backdrop/Overlay';
 import Link from 'next/link';
 import XIcon from '../Icons/XIcon';
+import clsx from 'clsx';
 
 
 export interface BaseModalProps {
@@ -35,7 +36,7 @@ const Modal = ({ visible, children, fullscreen, displayDark, dismissLink, bgOpac
                 style={{ zIndex: 10000 }}
             >
 
-                <div className={['relative mx-1 w-full md:mx-auto md:w-3/4 lg:w-1/2', fullscreen && `md:w-5/6 lg:w-5/6`].join(' ')}>
+                <div className={clsx('relative mx-1 w-full md:mx-auto md:w-3/4 lg:w-1/2', fullscreen && 'md:w-5/6 lg:w-5/6')}>
                     <>
                         {dismissLink
                             ?
