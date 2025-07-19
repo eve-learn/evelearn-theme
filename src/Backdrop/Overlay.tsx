@@ -19,12 +19,12 @@ const Overlay = ({ visible, onDismissed, onClick, zIndex, isDark, children, opac
     // const {theme: darkMode} = useDarkMode();
 
     useEffect(() => {
-        // if (modalRoot) return;
-        // Create a div element to serve as our portal's root
         let root = document.getElementById('modal-root');
         if (!root) {
             root = document.createElement('div');
             root.id = 'modal-root';
+            // Add the same theme class to modal root as the document element
+            root.classList.add(document.documentElement.classList.contains('dark') ? 'dark' : 'light');
             document.body.appendChild(root);
         }
         setModalRoot(root);
@@ -32,12 +32,9 @@ const Overlay = ({ visible, onDismissed, onClick, zIndex, isDark, children, opac
         return () => {
             const root = document.getElementById('modal-root');
             if (root) {
-                // root = document.createElement('div');
-                // root.id = 'modal-root';
                 document.body.removeChild(root);
             }
         }
-
     }, [visible]);
 
     if (!visible || !modalRoot) return null;

@@ -44,13 +44,13 @@ const Modal = ({ visible, children, fullscreen, displayDark, dismissLink, bgOpac
                                 scroll={false}
                             >
                                 <div onClick={onDismissed}>
-                                    <XIcon className='absolute h-5 w-5 top-5 sm:top-20 right-4 transition-colors cursor-pointer duration-75 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-500' />
+                                    <XIcon className='absolute h-5 w-5 top-7 sm:top-20 right-4 transition-colors cursor-pointer duration-75 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-500' />
                                 </div>
                             </Link>
                             :
                             dismissable ?
                                 <button
-                                    className='absolute top-5 sm:top-20 right-4 transition-colors cursor-pointer duration-75 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-500'
+                                    className='absolute top-7 sm:top-20 right-4 transition-colors cursor-pointer duration-75 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-500'
                                     type={'button'}
                                     onClick={onDismissed}
                                 >
