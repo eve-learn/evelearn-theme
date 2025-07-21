@@ -35,34 +35,31 @@ const Modal = ({ visible, children, fullscreen, displayDark, dismissLink, bgOpac
                 className={clsx(displayDark && 'dark', 'bg-slate-900/20 fixed inset-0 flex items-center justify-center')}
                 style={{ zIndex: 10000 }}
             >
-
                 <div className={clsx('relative mx-1 w-full md:mx-auto md:w-3/4 lg:w-1/2', fullscreen && 'md:w-5/6 lg:w-5/6')}>
-                    <>
-                        {dismissLink
-                            ?
-                            <Link
-                                href={dismissLink}
-                                scroll={false}
+                    {dismissLink
+                        ?
+                        <Link
+                            href={dismissLink}
+                            scroll={false}
+                        >
+                            <div onClick={onDismissed}>
+                                <XIcon className='absolute h-5 w-5 top-4 sm:top-8 right-4 transition-colors cursor-pointer duration-75 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-500' />
+                            </div>
+                        </Link>
+                        :
+                        dismissable ?
+                            <button
+                                className='absolute top-4 sm:top-8 right-4 transition-colors cursor-pointer duration-75 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-500'
+                                type={'button'}
+                                onClick={onDismissed}
                             >
-                                <div onClick={onDismissed}>
-                                    <XIcon className='absolute h-5 w-5 top-7 sm:top-20 right-4 transition-colors cursor-pointer duration-75 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-500' />
-                                </div>
-                            </Link>
+                                <XIcon
+                                    className='h-5 w-5'
+                                />
+                            </button>
                             :
-                            dismissable ?
-                                <button
-                                    className='absolute top-7 sm:top-20 right-4 transition-colors cursor-pointer duration-75 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-500'
-                                    type={'button'}
-                                    onClick={onDismissed}
-                                >
-                                    <XIcon
-                                        className='h-5 w-5'
-                                    />
-                                </button>
-                                :
-                                null
-                        }
-                    </>
+                            null
+                    }
                     <div
                         className='my-1 sm:mt-16 bg-white dark:bg-slate-900 shadow-lg border border-gray-100 dark:border-none rounded-xl overflow-x-visible overflow-y-visible no-scrollbar'
                         onClick={e => e.stopPropagation()}
