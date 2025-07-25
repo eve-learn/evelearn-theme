@@ -10,7 +10,6 @@ const OverlaySpinner = ({ visible }: Props) => {
     const [modalRoot, setModalRoot] = useState<HTMLElement | null>(null);
     const [mounted, setMounted] = useState(false);
     useEffect(() => setMounted(true), []);
-    if (!mounted) return null;
 
     useEffect(() => {
         if (modalRoot || !visible) return;
@@ -33,7 +32,7 @@ const OverlaySpinner = ({ visible }: Props) => {
 
     }, [visible]);
 
-    if (!visible) return null;
+    if (!visible || !mounted) return null;
     return (
         createPortal(
             <div className="animate-fade-in">
