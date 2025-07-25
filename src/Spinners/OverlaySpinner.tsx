@@ -7,32 +7,31 @@ import { createPortal } from 'react-dom';
 type Props = { visible: boolean; };
 
 const OverlaySpinner = ({ visible }: Props) => {
-    // const isDark = useStoreState(state => state.theme) === 'dark';
-    // const [modalRoot, setModalRoot] = useState<HTMLElement | null>(null);
+    const [modalRoot, setModalRoot] = useState<HTMLElement | null>(null);
     const [mounted, setMounted] = useState(false);
     useEffect(() => setMounted(true), []);
     if (!mounted) return null;
 
-    // useEffect(() => {
-    //     if (modalRoot || !visible) return;
-    //     // Create a div element to serve as our portal's root
-    //     let root = document.getElementById('spinner-root');
-    //     if (!root) {
-    //         root = document.createElement('div');
-    //         root.id = 'spinner-root';
-    //         document.body.appendChild(root);
-    //     }
-    //     setModalRoot(root);
-    //     return () => {
-    //         let root = document.getElementById('spinner-root');
-    //         if (root) {
-    //             // root = document.createElement('div');
-    //             // root.id = 'modal-root';
-    //             document.body.removeChild(root);
-    //         }
-    //     }
+    useEffect(() => {
+        if (modalRoot || !visible) return;
+        // Create a div element to serve as our portal's root
+        let root = document.getElementById('spinner-root');
+        if (!root) {
+            root = document.createElement('div');
+            root.id = 'spinner-root';
+            document.body.appendChild(root);
+        }
+        setModalRoot(root);
+        return () => {
+            let root = document.getElementById('spinner-root');
+            if (root) {
+                // root = document.createElement('div');
+                // root.id = 'modal-root';
+                document.body.removeChild(root);
+            }
+        }
 
-    // }, [visible]);
+    }, [visible]);
 
     if (!visible) return null;
     return (
