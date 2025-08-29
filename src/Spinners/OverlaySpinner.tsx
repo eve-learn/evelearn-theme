@@ -35,8 +35,8 @@ const OverlaySpinner = ({ visible }: Props) => {
     if (!visible || !mounted) return null;
     return (
         createPortal(
-            <div className="animate-fade-in">
-                <div className='fixed top-0 left-0 w-full h-screen flex items-center justify-center z-50 dark:bg-black/70 bg-white/60'>
+            <div style={{zIndex: 11000}} className="animate-fade-in">
+                <div style={{zIndex: 11001}} className='fixed top-0 left-0 w-full h-screen flex items-center justify-center dark:bg-black/70 bg-white/60'>
                     <div className='h-44 w-44 overflow-visible'>
                         <AnimateLogo />
                     </div>
