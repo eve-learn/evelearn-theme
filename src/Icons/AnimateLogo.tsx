@@ -4,7 +4,6 @@ const AnimateLogo = () => {
     const [isFirefox, setIsFirefox] = useState(false);
 
     useEffect(() => {
-        // Check if browser is Firefox
         const userAgent = window.navigator.userAgent;
         setIsFirefox(userAgent.indexOf("Firefox") > -1);
     }, []);
@@ -59,12 +58,7 @@ const AnimateLogo = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
             <g
-                style={{
-                    transformOrigin: 'center',
-                }}
-                transform='translate(300 300) rotate(0)'
-                height={176}
-                width={176}
+                style={{ transformOrigin: 'center' }}
             >
                 <path
                     className="stroke-black dark:stroke-white text-gray-900 dark:text-gray-50"
@@ -74,9 +68,7 @@ const AnimateLogo = () => {
                     strokeLinecap="round"
                     height={600}
                     width={600}
-                    style={{
-                        transformOrigin: 'center',
-                    }}
+                    style={{ transformOrigin: 'center' }}
                     strokeMiterlimit="10"
                     strokeWidth="82"
                     strokeDasharray="1600"
@@ -94,20 +86,20 @@ const AnimateLogo = () => {
                         keySplines="0 0.26 0 1;0 0.26 0 1;0 0.26 0 1;0 0.26 0 1"
                         values="1600;0;0;1600;1600"
                     />
+                    <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 300 300"
+                        to="360 300 300"
+                        dur="2s"
+                        fill="freeze"
+                        repeatCount="indefinite"
+                        calcMode="cubic"
+                        keyTimes="0;0.75;1"
+                        keySplines="0 0.26 0 1"
+                        values="0 300 300;360 300 300;360 300 300;"
+                    />
                 </path>
-                <animateTransform
-                    attributeName="transform"
-                    type="rotate"
-                    from="0"
-                    to="360"
-                    dur="2s"
-                    fill="freeze"
-                    repeatCount="indefinite"
-                    calcMode="cubic"
-                    keyTimes="0;0.75;1"
-                    keySplines="0 0.26 0 1"
-                    values="0;360;360;"
-                />
             </g>
         </svg>
     );
