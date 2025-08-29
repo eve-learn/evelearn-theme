@@ -24,15 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Bump version (patch)
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          npm version patch --no-git-tag-version
-          git add package.json package-lock.json
-          git commit -m "chore: bump version [skip ci]"
-          git push
-
       - name: Build the package
         run: npm run build
 
