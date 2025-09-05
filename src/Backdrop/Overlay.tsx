@@ -17,6 +17,7 @@ export type OverlayProps = BaseModalProps & {
 const Overlay = ({ visible, onDismissed, onClick, zIndex, isDark, children, opacity, withContainer = true, }: OverlayProps) => {
     const [modalRoot, setModalRoot] = useState<HTMLElement | null>(null);
     // const {theme: darkMode} = useDarkMode();
+    // const [dark, setDark] = useState(false);
 
     useEffect(() => {
         let root = document.getElementById('modal-root');
@@ -44,9 +45,9 @@ const Overlay = ({ visible, onDismissed, onClick, zIndex, isDark, children, opac
             {withContainer ?
                 <div
                     onClick={onDismissed || onClick}
-                    className='top-0 left-0 fixed w-full h-screen backdrop-blur-lg flex items-center justify-center bg-white/60 dark:bg-black/30'
+                    className='top-0 left-0 fixed w-full h-screen dark:bg-black/70 bg-white/60 backdrop-blur-lg flex items-center justify-center'
                     style={{
-                        background: isDark ? `rgba(0, 0, 0, ${opacity || '0.7'})` : `rgba(255, 255, 255, ${opacity || '0.6'})`,
+                        // background: dark ? `rgba(0, 0, 0, ${opacity || '0.7'})` : `rgba(255, 255, 255, ${opacity || '0.6'})`,
                         zIndex: zIndex || 9999,
                     }}
                 >
