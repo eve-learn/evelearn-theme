@@ -2,7 +2,6 @@
 
 import React, { CSSProperties } from 'react';
 import Overlay from '../Backdrop/Overlay';
-import Link from 'next/link';
 import XIcon from '../Icons/XIcon';
 import clsx from 'clsx';
 
@@ -38,14 +37,13 @@ const Modal = ({ visible, children, fullscreen, displayDark, dismissLink, bgOpac
                 <div className={clsx('relative mx-1 w-full md:mx-auto md:w-3/4 lg:w-1/2', fullscreen && 'md:w-5/6 lg:w-5/6')}>
                     {dismissLink
                         ?
-                        <Link
+                        <a
                             href={dismissLink}
-                            scroll={false}
                         >
                             <div onClick={onDismissed}>
                                 <XIcon className='absolute h-5 w-5 top-4 sm:top-8 right-4 transition-colors cursor-pointer duration-75 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-500' />
                             </div>
-                        </Link>
+                        </a>
                         :
                         dismissable ?
                             <button
