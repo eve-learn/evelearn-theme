@@ -13,7 +13,10 @@ const AnimateLogo = () => {
     if (isFirefox) {
         return (
             <svg xmlns="http://www.w3.org/2000/svg" className="animate-spin" viewBox="0 0 600 600">
-                <g>
+                <g
+                    height={176}
+                    width={176}
+                >
                     <path
                         className="stroke-black dark:stroke-white text-gray-900 dark:text-gray-50"
                         stroke={"currentColor"}

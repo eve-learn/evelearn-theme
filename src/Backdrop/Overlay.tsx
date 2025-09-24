@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { BaseModalProps } from '../Common/Modal';
 import ReactDOM from 'react-dom';
-// import useDarkMode from '@/listeners/DarkModeListener';
 
 export type OverlayProps = BaseModalProps & {
     children?: React.ReactNode;
@@ -16,8 +15,6 @@ export type OverlayProps = BaseModalProps & {
 
 const Overlay = ({ visible, onDismissed, onClick, zIndex, isDark, children, opacity, withContainer = true, }: OverlayProps) => {
     const [modalRoot, setModalRoot] = useState<HTMLElement | null>(null);
-    // const {theme: darkMode} = useDarkMode();
-    // const [dark, setDark] = useState(false);
 
     useEffect(() => {
         let root = document.getElementById('modal-root');

@@ -17,8 +17,13 @@ const OverlaySpinner = ({ visible }: Props) => {
             document.body.appendChild(root);
         }
         setModalRoot(root);
-        
-        // No cleanup needed here. We want the root to persist.
+
+        return () => {
+            const root = document.getElementById('spinner-root');
+            if (root) {
+                document.body.removeChild(root);
+            }
+        }
     }, []);
 
     if (!visible || !modalRoot) {
@@ -26,8 +31,8 @@ const OverlaySpinner = ({ visible }: Props) => {
     }
 
     return createPortal(
-        <div style={{zIndex: 11000}} className="animate-fade-in">
-            <div style={{zIndex: 11001}} className='fixed top-0 left-0 w-full h-screen flex items-center justify-center dark:bg-black/70 bg-white/60'>
+        <div style={{zIndex: 11000}}>
+            <div style={{zIndex: 11001}} className='fixed shrink-0 top-0 left-0 w-full h-screen flex items-center justify-center dark:bg-black/70 bg-white/60'>
                 <div className='h-44 w-44 overflow-visible'>
                     <AnimateLogo />
                 </div>
