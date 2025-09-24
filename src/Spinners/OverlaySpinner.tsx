@@ -24,7 +24,7 @@ const OverlaySpinner = ({ visible }: Props) => {
                 document.body.removeChild(root);
             }
         }
-    }, []);
+    }, [visible]);
 
     if (!visible || !modalRoot) {
         return null;
