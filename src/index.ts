@@ -31,7 +31,5 @@ export { default as ProgressBar } from './ProgressBar/ProgressBar';
 export { default as CircleProgress } from './ProgressBar/CircleProgress';
 export { default as CourseProgress } from './ProgressBar/CourseProgress';
 export { default as ScrollProgress } from './ProgressBar/ScrollProgress';
-export { default as OverlaySpinner } from './Spinners/OverlaySpinner';
-export { default as AnimateLogo } from './Icons/AnimateLogo';
 
 
