@@ -1,11 +1,11 @@
 {
   "name": "evelearn-theme",
-  "version": "2.0.28",
+  "version": "2.0.29",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "build": "tsup",
     "pub": "npm publish --access public"
   },
   "exports": {
