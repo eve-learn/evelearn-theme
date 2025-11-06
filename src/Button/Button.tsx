@@ -2,6 +2,7 @@
 
 import clsx from 'clsx';
 import React from 'react';
+import Spinner from '../Spinners/Spinner';
 
 interface Props {
     disabled?: boolean;
@@ -62,33 +63,7 @@ const Button = ({ disabled = false, loading, onClick, kind = 'primary', size = '
             <div className='w-full max-h-11'>
                 {loading ?
                     <div className='flex w-full justify-center items-center'>
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2.5"
-                            className="size-10"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                d="M2 16s9-15 20-4C11 23 2 8 2 8"
-                                strokeDasharray="70"
-                                strokeDashoffset="70"
-                            >
-                                <animate
-                                    attributeName="stroke-dashoffset"
-                                    calcMode="spline"
-                                    dur="2"
-                                    keySplines="0 0 1 1"
-                                    repeatCount="indefinite"
-                                    from="70"
-                                    to="-70"
-                                    fill="freeze"
-                                />
-                            </path>
-                        </svg>
+                        <Spinner white size={32} />
                     </div>
                     :
                     children
