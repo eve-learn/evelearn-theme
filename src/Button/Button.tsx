@@ -1,7 +1,6 @@
 'use client';
 
 import clsx from 'clsx';
-import Spinner from '../Spinners/Spinner';
 import React from 'react';
 
 interface Props {
@@ -15,7 +14,7 @@ interface Props {
 }
 
 const Button = ({ disabled = false, loading, onClick, kind = 'primary', size = 'small', type = 'button', children }: Props) => {
-    
+
     const styled = () => {
         switch (kind) {
             case 'primary':
@@ -55,15 +54,41 @@ const Button = ({ disabled = false, loading, onClick, kind = 'primary', size = '
     }
 
     return (
-        <button 
-            type={type || 'button'} 
+        <button
+            type={type || 'button'}
             disabled={disabled}
             className={clsx('rounded-lg cursor-pointer focus:outline-none transition duration-100', styled(), sized())}
             onClick={onClick}>
             <div className='w-full max-h-11'>
                 {loading ?
                     <div className='flex w-full justify-center items-center'>
-                        <Spinner white />
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2.5"
+                            className="size-10"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                d="M2 16s9-15 20-4C11 23 2 8 2 8"
+                                strokeDasharray="70"
+                                strokeDashoffset="70"
+                            >
+                                <animate
+                                    attributeName="stroke-dashoffset"
+                                    calcMode="spline"
+                                    dur="2"
+                                    keySplines="0 0 1 1"
+                                    repeatCount="indefinite"
+                                    from="70"
+                                    to="-70"
+                                    fill="freeze"
+                                />
+                            </path>
+                        </svg>
                     </div>
                     :
                     children
