@@ -3,6 +3,7 @@
 
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
+@plugin "tailwindcss-corner-shape/presets/squircle";
 
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant hover (&:hover);
