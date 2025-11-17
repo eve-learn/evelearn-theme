@@ -58,7 +58,7 @@ const Button = ({ disabled = false, loading, onClick, kind = 'primary', size = '
         <button
             type={type || 'button'}
             disabled={disabled}
-            className={clsx('squircle cursor-pointer focus:outline-none transition duration-100', styled(), sized())}
+            className={clsx('rounded-lg cursor-pointer focus:outline-none transition duration-100', styled(), sized())}
             onClick={onClick}>
             <div className='w-full max-h-11'>
                 {loading ?
