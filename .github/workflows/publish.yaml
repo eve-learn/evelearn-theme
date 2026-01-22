@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+permissions:
+    id-token: write  # Required for OIDC
+    contents: read
 jobs:
   bump-and-publish:
     runs-on: ubuntu-latest
@@ -29,5 +32,4 @@ jobs:
 
       - name: Publish to npm
         run: npm run pub
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
