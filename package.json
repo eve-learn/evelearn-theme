@@ -4,6 +4,10 @@
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eve-learn/evelearn-theme"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "pub": "npm publish --access public"
