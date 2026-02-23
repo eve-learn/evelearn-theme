@@ -10,6 +10,7 @@ export { default as StepsComponent } from './Common/StepsComponent';
 export { default as Fade } from './Fade/Fade';
 export { default as Backdrop } from './Backdrop/Backdrop';
 export { default as Breakpoint } from './Breakpoint/Breakpoint';
+export {default as Pagination } from './Common/Pagination';
 
 export { default as Overlay } from './Backdrop/Overlay';
 export { default as Button } from './Button/Button';
