@@ -13,13 +13,13 @@ const NoticeBox: React.FC<Props & React.HTMLAttributes<HTMLDivElement>> = ({ chi
     const [visible, setVisible] = useState(true);
 
     const styles = useMemo(() => {
-        const base = 'relative text-base rounded-md p-2 ';
+        const base = 'relative text-base bg-slate-50 dark:bg-slate-800 rounded-md p-2 ';
         if (!visible) return 'hidden';
         switch (type) {
             case 'error':
                 return base.concat('w-full absolute top-50 text-red-500 border-red-400 border-2');
             case 'info':
-                return base.concat('text-green-800 border-green-400 bg-green-100');
+                return base.concat('text-gray-800 dark:text-gray-300 border-green-400');
             case 'warning':
                 return base.concat('text-orange-500 border border-orange-400 bg-white');
             default:

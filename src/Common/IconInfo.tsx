@@ -1,6 +1,6 @@
 'use client';
 
-import clsx from "clsx";
+import { tw } from "../utils/utils";
 import Tippy from "./Tippy";
 import { tippyClassname } from "./fieldStyle";
 
@@ -22,7 +22,7 @@ const IconInfo = ({ content, icon, number, color }: IconInfoProps) => {
             >
                 <div className='relative'>
                     {icon}
-                    <p className={clsx('absolute -bottom-1', 
+                    <p className={tw('absolute -bottom-1', 
                         number > 9 
                             ? number > 99 
                                 ? number > 999 

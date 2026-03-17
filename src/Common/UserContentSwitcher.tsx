@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import PlusCircleIcon from '../Icons/PlusCircleIcon';
 import ArrowCircleRight from '../Icons/ArrowCircleRight';
-import clsx from 'clsx';
+import {tw} from '../utils/utils';
 
 
 type ModeProps = {
@@ -33,7 +33,7 @@ const UserContentSwitcher = ({ icon1: Icon1, icon2: Icon2, setGalleryMode, galle
           className='py-2 flex flex-row w-1/2 justify-center items-center gap-1 z-10'
         >
           <span
-            className={clsx('truncate', {
+            className={tw('truncate', {
                 'text-primary dark:text-blue-400': galleryMode === title1.toLowerCase(),
                 'text-slate-500 dark:text-slate-400 opacity-90': galleryMode !== title1.toLowerCase()
             })}
@@ -43,7 +43,7 @@ const UserContentSwitcher = ({ icon1: Icon1, icon2: Icon2, setGalleryMode, galle
   
           {Icon1 ? (
             <Icon1
-              className={clsx('h-5 w-5', {
+              className={tw('h-5 w-5', {
                 'text-primary dark:text-blue-400': galleryMode === title1.toLowerCase(),
                 'text-slate-500 dark:text-slate-400 opacity-90': galleryMode !== title1.toLowerCase()
               })}
@@ -51,7 +51,7 @@ const UserContentSwitcher = ({ icon1: Icon1, icon2: Icon2, setGalleryMode, galle
           ):
           
             <PlusCircleIcon
-              className={clsx('h-5 w-5', {
+              className={tw('h-5 w-5', {
                 'text-primary dark:text-blue-400': galleryMode === title1.toLowerCase(),
                 'text-slate-500 dark:text-slate-400 opacity-90': galleryMode !== title1.toLowerCase()
               })}
@@ -63,7 +63,7 @@ const UserContentSwitcher = ({ icon1: Icon1, icon2: Icon2, setGalleryMode, galle
           className='py-2 flex flex-row w-1/2 justify-center items-center gap-1 z-10'
         >
           <span
-            className={clsx('truncate', {
+            className={tw('truncate', {
                 'text-primary dark:text-blue-400': galleryMode === title2.toLowerCase(),
                 'text-slate-500 dark:text-slate-400 opacity-90': galleryMode !== title2.toLowerCase()
             })}
@@ -73,14 +73,14 @@ const UserContentSwitcher = ({ icon1: Icon1, icon2: Icon2, setGalleryMode, galle
   
           {Icon2 ? (
             <Icon2
-              className={clsx('h-5 w-5', {
+              className={tw('h-5 w-5', {
                 'text-primary dark:text-blue-400': galleryMode === title2.toLowerCase(),
                 'text-slate-500 dark:text-slate-400 opacity-90': galleryMode !== title2.toLowerCase()
               })}
             />
           ) : (
             <ArrowCircleRight
-              className={clsx('h-5 w-5', {
+              className={tw('h-5 w-5', {
                 'text-primary dark:text-blue-400': galleryMode === title2.toLowerCase(),
                 'text-slate-500 dark:text-slate-400 opacity-90': galleryMode !== title2.toLowerCase()
               })}

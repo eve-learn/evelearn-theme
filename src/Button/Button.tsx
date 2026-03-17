@@ -1,6 +1,6 @@
 'use client';
 
-import clsx from 'clsx';
+import {tw} from '../utils/utils';
 import React from 'react';
 import Spinner from '../Spinners/Spinner';
 
@@ -19,23 +19,23 @@ const Button = ({ disabled = false, loading, onClick, kind = 'primary', size = '
     const styled = () => {
         switch (kind) {
             case 'primary':
-                return clsx('bg-primary font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw('bg-primary hover:bg-primary/95 shadow-xs hover:shadow-none dark:shadow-none dark:hover:bg-primary/90 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
             case 'indigo':
-                return clsx('bg-indigo-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw('bg-indigo-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
             case 'green':
-                return clsx('bg-green-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw('bg-green-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
             case 'teal':
-                return clsx('bg-teal-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw('bg-teal-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
             case 'secondary':
-                return clsx('bg-secondary text-white font-header font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw('bg-secondary text-white font-header font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
             case 'base':
-                return clsx('bg-white border-1 font-header border-gray-200 dark:bg-slate-600 dark:text-gray-100 transition-all duration-75 disabled:opacity-50 dark:hover:bg-slate-400 hover:bg-slate-100');
+                return tw('bg-white border-1 font-header border-gray-200 dark:bg-slate-600 dark:text-gray-100 transition-all duration-75 disabled:opacity-50 dark:hover:bg-slate-400 hover:bg-slate-100');
             case 'gray':
-                return clsx('bg-slate-400 dark:bg-slate-700 font-header text-white border-1 font-medium transition-opacity duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw('bg-slate-400 dark:bg-slate-700 font-header text-white border-1 font-medium transition-opacity duration-75 disabled:opacity-50 hover:bg-black/10');
             case 'alert':
-                return clsx('bg-amber-500 font-header text-white transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw('bg-amber-500 font-header text-white transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
             case 'warning':
-                return clsx('bg-red-500 font-header text-white font-medium transition-opacity duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw('bg-red-500 font-header text-white font-medium transition-opacity duration-75 disabled:opacity-50 hover:bg-black/10');
             default:
                 break;
         }
@@ -58,7 +58,7 @@ const Button = ({ disabled = false, loading, onClick, kind = 'primary', size = '
         <button
             type={type || 'button'}
             disabled={disabled}
-            className={clsx('rounded-lg cursor-pointer focus:outline-none transition duration-100', styled(), sized())}
+            className={tw('rounded-lg cursor-pointer focus:outline-none transition duration-100', styled(), sized())}
             onClick={onClick}>
             <div className='w-full max-h-11'>
                 {loading ?

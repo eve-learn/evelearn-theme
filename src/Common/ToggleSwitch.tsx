@@ -3,7 +3,7 @@
 import { useField } from 'formik';
 import { ChangeEvent } from 'react';
 import { motion } from 'framer-motion';
-import clsx from 'clsx';
+import {tw} from '../utils/utils';
 
 type FormikProps = {
     label: string;
@@ -27,7 +27,7 @@ const Formik = ({ label, name }: FormikProps) => {
                     onChange={handleChange}
                 />
                 <div
-                    className={clsx('w-10 h-6 rounded-full p-[4px] transition-colors duration-300', value ? 'bg-primary' : 'dark:bg-slate-950 bg-stone-400')}
+                    className={tw('w-10 h-6 rounded-full p-[4px] transition-colors duration-300', value ? 'bg-primary' : 'dark:bg-slate-950 bg-stone-400')}
                 >
                     <motion.div
                         className="w-4 h-4 bg-white rounded-full absolute top-1"
@@ -65,7 +65,7 @@ const ToggleSwitch = ({ label, onChange, value }: Props) => {
                     onChange={handleChange}
                 />
                 <div
-                    className={clsx('w-10 h-6 rounded-full p-[4px] transition-colors duration-300', value ? 'bg-primary' : 'dark:bg-slate-950 bg-stone-400')}
+                    className={tw('w-10 h-6 rounded-full p-[4px] transition-colors duration-300', value ? 'bg-primary' : 'dark:bg-slate-950 bg-stone-400')}
                 >
                     <motion.div
                         className="w-4 h-4 bg-white rounded-full absolute top-1"

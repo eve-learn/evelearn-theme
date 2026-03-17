@@ -3,7 +3,7 @@
 import React, { CSSProperties } from 'react';
 import Overlay from '../Backdrop/Overlay';
 import XIcon from '../Icons/XIcon';
-import clsx from 'clsx';
+import {tw} from '../utils/utils';
 
 
 export interface BaseModalProps {
@@ -38,14 +38,14 @@ const Modal = ({
     if (!visible) return null;
 
     // Modal content wrapper class for fullscreen logic
-    const modalWrapperClass = clsx(
+    const modalWrapperClass = tw(
         'relative mx-1 w-full',
         !fullscreen && 'md:mx-auto md:w-3/4 lg:w-1/2',
         fullscreen && 'fixed inset-0 mx-0 w-full h-full flex items-center justify-center md:mx-0 md:w-full lg:w-full'
     );
 
     // Modal panel class for fullscreen logic
-    const modalPanelClass = clsx(
+    const modalPanelClass = tw(
         'my-1 sm:mt-16 bg-white dark:bg-slate-900 shadow-lg border border-gray-100 dark:border-none rounded-xl overflow-x-visible overflow-y-visible no-scrollbar',
         fullscreen && 'rounded-none sm:mt-0 h-full w-full flex flex-col justify-center'
     );
@@ -70,7 +70,7 @@ const Modal = ({
             {...props}
         >
             <div
-                className={clsx(
+                className={tw(
                     displayDark && 'dark',
                     'bg-slate-900/20 fixed inset-0 flex items-center justify-center'
                 )}

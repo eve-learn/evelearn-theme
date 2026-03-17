@@ -1,6 +1,6 @@
 {
   "name": "evelearn-theme",
-  "version": "2.0.38",
+  "version": "2.0.39",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -49,6 +49,7 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "react-paginate": "^8.3.0",
+    "tailwind-merge": "^3.5.0",
     "tailwindcss-corner-shape": "^1.4.5"
   }
 }
