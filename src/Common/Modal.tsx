@@ -41,13 +41,13 @@ const Modal = ({
     const modalWrapperClass = tw(
         'relative mx-1 w-full',
         !fullscreen && 'md:mx-auto md:w-3/4 lg:w-1/2',
-        fullscreen && 'fixed inset-0 mx-0 w-full h-full flex items-center justify-center md:mx-0 md:w-full lg:w-full'
+        fullscreen && 'fixed inset-0 mx-0 w-full h-full shrink-0 flex items-center justify-center'
     );
 
     // Modal panel class for fullscreen logic
     const modalPanelClass = tw(
         'my-1 sm:mt-16 bg-white dark:bg-slate-900 shadow-lg border border-gray-100 dark:border-none rounded-xl overflow-x-visible overflow-y-visible no-scrollbar',
-        fullscreen && 'rounded-none sm:mt-0 h-full w-full flex flex-col justify-center'
+        fullscreen && 'rounded-none sm:mt-0 h-full shrink-0 w-full flex flex-col justify-center'
     );
 
     // Modal panel style for fullscreen logic
@@ -56,10 +56,7 @@ const Modal = ({
         : { maxHeight: 'calc(100vh - 6rem)', ...style };
 
     // Modal inner padding adjustment for fullscreen
-    const innerPaddingClass = fullscreen ? 'p-4 sm:p-10 flex-1 flex items-center justify-center' : 'p-4 sm:p-10';
-
-    // Inner "mt" adjustment for fullscreen
-    const contentMarginTopClass = fullscreen ? '' : 'mt-8 sm:mt-0';
+    const innerPaddingClass = fullscreen ? 'p-4 sm:p-10 shrink-0 flex-1 flex items-center justify-center' : 'p-4 sm:p-10 mt-8 sm:mt-0';
 
     return (
         <Overlay
@@ -72,7 +69,7 @@ const Modal = ({
             <div
                 className={tw(
                     displayDark && 'dark',
-                    'bg-slate-900/20 fixed inset-0 flex items-center justify-center'
+                    'bg-slate-900/20 fixed inset-0 flex items-center justify-center w-full h-full'
                 )}
                 style={{ zIndex: 10000 }}
             >
@@ -98,9 +95,7 @@ const Modal = ({
                         style={modalPanelStyle}
                     >
                         <div className={innerPaddingClass}>
-                            <div className={contentMarginTopClass}>
-                                {children}
-                            </div>
+                            {children}
                         </div>
                     </div>
                 </div>
