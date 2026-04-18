@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 interface Props {
     disabled?: boolean;
-    color?: 'primary' | 'red' | 'green' | 'purple' | 'teal' | 'yellow' | 'cyan';
+    color?: 'primary' | 'red' | 'green' | 'purple' | 'teal' | 'yellow' | 'cyan' | 'slate';
     type?: 'button' | 'submit';
     active?: boolean;
     children: React.ReactNode;
@@ -43,6 +43,8 @@ const FunButton: React.FC<Props> = ({
                 return { bottom: '#06b6d4', front: '#0891b2' };
             case 'yellow':
                 return { bottom: '#eab308', front: '#ca8a04' };
+            case 'slate':
+                return { bottom: '#94a3b8', front: '#64748b' };
             default:
                 return { bottom: '#00b4d8', front: '#0369a1' };
         }

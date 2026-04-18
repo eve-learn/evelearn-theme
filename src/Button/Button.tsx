@@ -19,7 +19,7 @@ const Button = ({ disabled = false, loading, onClick, kind = 'primary', size = '
     const styled = () => {
         switch (kind) {
             case 'primary':
-                return tw('bg-primary hover:bg-primary/95 shadow-xs hover:shadow-none dark:shadow-none dark:hover:bg-primary/90 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw('bg-primary hover:bg-primary/95 shadow-md dark:shadow-m hover:shadow-none dark:hover:shadow-none dark:hover:bg-primary/90 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
             case 'indigo':
                 return tw('bg-indigo-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
             case 'green':
