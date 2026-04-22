@@ -33,7 +33,7 @@ const Formik = ({ label, name }: FormikProps) => {
                         className="w-4 h-4 bg-white rounded-full absolute top-1"
                         initial={false}
                         animate={{
-                            x: value ? 16 : 0
+                            x: value ? 18 : 4
                         }}
                         transition={{ type: "spring", stiffness: 500, damping: 30 }}
                     />
@@ -41,6 +41,7 @@ const Formik = ({ label, name }: FormikProps) => {
             </div>
             <span className='text-sm font-medium text-gray-800 dark:text-gray-200'>{label}</span>
         </label>
+ 
     );
 };
 
