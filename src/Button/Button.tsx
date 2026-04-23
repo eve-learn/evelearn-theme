@@ -21,22 +21,70 @@ const Button = ({ disabled = false, loading, onClick, kind = 'primary', size = '
             case 'primary':
                 return tw('bg-primary hover:bg-primary/95 shadow-md dark:shadow-m hover:shadow-none dark:hover:shadow-none dark:hover:bg-primary/90 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
             case 'indigo':
-                return tw('bg-indigo-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw(
+                    'bg-indigo-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50',
+                    'hover:bg-indigo-600', // similar hover color effect
+                    'shadow-md dark:shadow-m hover:shadow-none dark:hover:shadow-none', // shadow styles
+                    'hover:bg-black/10', // subtle overlay on hover (if wanted)
+                    'px-2 py-1' // base padding (same as primary)
+                );
             case 'green':
-                return tw('bg-green-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw(
+                    'bg-green-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50',
+                    'hover:bg-green-600',
+                    'shadow-md dark:shadow-m hover:shadow-none dark:hover:shadow-none',
+                    'hover:bg-black/10',
+                    'px-2 py-1'
+                );
             case 'teal':
-                return tw('bg-teal-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw(
+                    'bg-teal-500 font-header text-white font-medium transition-all duration-75 disabled:opacity-50',
+                    'hover:bg-teal-600',
+                    'shadow-md dark:shadow-m hover:shadow-none dark:hover:shadow-none',
+                    'hover:bg-black/10',
+                    'px-2 py-1'
+                );
             case 'secondary':
-                return tw('bg-secondary text-white font-header font-medium transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw(
+                    'bg-secondary text-white font-header font-medium transition-all duration-75 disabled:opacity-50',
+                    'hover:bg-secondary/90',
+                    'shadow-md dark:shadow-m hover:shadow-none dark:hover:shadow-none',
+                    'hover:bg-black/10',
+                    'px-2 py-1'
+                );
             case 'base':
-                return tw('bg-white border-1 font-header border-gray-200 dark:bg-slate-600 dark:text-gray-100 transition-all duration-75 disabled:opacity-50 dark:hover:bg-slate-400 hover:bg-slate-100');
+                return tw(
+                    'bg-white border-1 font-header border-gray-200 dark:bg-slate-600 dark:text-gray-100 transition-all duration-75 disabled:opacity-50',
+                    'dark:hover:bg-slate-400 hover:bg-slate-100',
+                    'shadow-md dark:shadow-m hover:shadow-none dark:hover:shadow-none',
+                    'px-2 py-1'
+                );
             case 'gray':
-                return tw('bg-slate-400 dark:bg-slate-700 font-header text-white border-1 font-medium transition-opacity duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw(
+                    'bg-slate-400 dark:bg-slate-700 font-header text-white border-1 font-medium transition-opacity duration-75 disabled:opacity-50',
+                    'hover:bg-slate-500 dark:hover:bg-slate-600',
+                    'shadow-md dark:shadow-m hover:shadow-none dark:hover:shadow-none',
+                    'hover:bg-black/10',
+                    'px-2 py-1'
+                );
             case 'alert':
-                return tw('bg-amber-500 font-header text-white transition-all duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw(
+                    'bg-amber-500 font-header text-white transition-all duration-75 disabled:opacity-50',
+                    'hover:bg-amber-600',
+                    'shadow-md dark:shadow-m hover:shadow-none dark:hover:shadow-none',
+                    'hover:bg-black/10',
+                    'px-2 py-1'
+                );
             case 'warning':
-                return tw('bg-red-500 font-header text-white font-medium transition-opacity duration-75 disabled:opacity-50 hover:bg-black/10');
+                return tw(
+                    'bg-red-500 font-header text-white font-medium transition-opacity duration-75 disabled:opacity-50',
+                    'hover:bg-red-600',
+                    'shadow-md dark:shadow-m hover:shadow-none dark:hover:shadow-none',
+                    'hover:bg-black/10',
+                    'px-2 py-1'
+                );
             default:
+       
                 break;
         }
     }
