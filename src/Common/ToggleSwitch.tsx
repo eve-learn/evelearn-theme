@@ -19,21 +19,24 @@ const Formik = ({ label, name }: FormikProps) => {
 
     return (
         <label className='flex items-center space-x-2 cursor-pointer'>
-            <div className="relative">
+            <div className="relative w-10 h-6">
                 <input
                     type="checkbox"
-                    className="opacity-0 absolute"
+                    className="opacity-0 absolute w-full h-full"
                     checked={value}
                     onChange={handleChange}
                 />
                 <div
-                    className={tw('w-10 h-6 rounded-full p-[4px] transition-colors duration-300', value ? 'bg-primary' : 'dark:bg-slate-950 bg-stone-400')}
+                    className={tw(
+                        'w-10 h-6 rounded-full transition-colors duration-300',
+                        value ? 'bg-primary' : 'dark:bg-slate-950 bg-stone-400'
+                    )}
                 >
                     <motion.div
-                        className="w-4 h-4 bg-white rounded-full absolute top-1"
+                        className="w-6 h-6 bg-white rounded-full absolute top-0 left-0 shadow"
                         initial={false}
                         animate={{
-                            x: value ? 18 : 4
+                            x: value ? 16 : 0
                         }}
                         transition={{ type: "spring", stiffness: 500, damping: 30 }}
                     />
