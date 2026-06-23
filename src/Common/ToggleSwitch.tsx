@@ -69,7 +69,7 @@ const ToggleSwitch = ({ label, onChange, value }: Props) => {
                     onChange={handleChange}
                 />
                 <div
-                    className={tw('w-10 h-6 rounded-full p-[4px] transition-colors duration-300', value ? 'bg-primary' : 'dark:bg-slate-950 bg-stone-400')}
+                    className={tw('w-10 h-6 rounded-full p-1 transition-colors duration-300', value ? 'bg-primary' : 'dark:bg-slate-950 bg-stone-400')}
                 >
                     <motion.div
                         className="w-4 h-4 bg-white rounded-full absolute top-1"
